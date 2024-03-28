@@ -29,7 +29,7 @@ const HybridInput: React.FC<HybridInputProps> = ({ onInputChange, onSave, initia
     const getSuggestions = async (inputValue: string) => {
         try {
             const response = await fetch(
-                `http://localhost:3000/api/suggestions?input=${inputValue}`,
+                `https://hybrid-input.vercel.app/api/suggestions?input=${inputValue}`,
             );
             if (!response.ok) {
                 throw new Error('Failed to fetch suggestions');

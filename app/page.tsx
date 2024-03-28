@@ -15,7 +15,7 @@ const Home: React.FC = () => {
     setInputValue(value);
     try {
       const response = await fetch(
-        `http://localhost:3000/api/suggestions?input=${value}`,
+        `https://hybrid-input.vercel.app/api/suggestions?input=${value}`,
       );
       if (!response.ok) {
         throw new Error('Failed to fetch suggestions');
